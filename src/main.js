@@ -4,26 +4,18 @@ import { code } from 'telegraf/format'
 import config from 'config'
 import { ogg } from './ogg.js'
 import { openai } from './openai.js'
+import { removeFile } from './utils.js'
+import { initCommand, processTextToChat, INITIAL_SESSION } from './logic.js'
 
 console.log(config.get('TEST'))
-
-const INITIAL_SESSION = {
-    messages: [],
-}
 
 const bot = new Telegraf(config.get('TELEGRAM_TOKEN'))
 
 bot.use(session())
 
-bot.command('new', async (ctx) => {
-    ctx.session = INITIAL_SESSION
-    await ctx.reply('Waiting your text or voice message')
-})
+bot.command('new', initCommand)
 
-bot.command('start', async (ctx) => {
-    ctx.session = INITIAL_SESSION
-    await ctx.reply('Waiting your text or voice message')
-})
+bot.command('start', initCommand)
 
 bot.on(message('voice'), async ctx => {
     ctx.session ??= INITIAL_SESSION
@@ -34,14 +26,15 @@ bot.on(message('voice'), async ctx => {
         const oggPath = await ogg.create(link.href, userId)
         const mp3Path = await ogg.toMp3(oggPath, userId)
 
+        removeFile(oggPath)
+
         const text = await openai.transcription(mp3Path)
+
+        removeFile(mp3Path)
+
         await ctx.reply(code(`Your request: ${text}`))
 
-        ctx.session.messages.push({role: openai.roles.USER, content: text})
-        const response = await openai.chat(ctx.session.messages)
-        ctx.session.messages.push({role: openai.roles.ASSISTANT, content: response.content})
-
-        await ctx.reply(response.content)
+        await processTextToChat(ctx, text)
     } catch (e) {
         console.log('Error while voice message', e.message)
     }
@@ -51,12 +44,7 @@ bot.on(message('text'), async ctx => {
     ctx.session ??= INITIAL_SESSION
     try {
         await ctx.reply(code('Message sent. Waiting a responce...'))
-
-        ctx.session.messages.push({role: openai.roles.USER, content: ctx.message.text})
-        const response = await openai.chat(ctx.session.messages)
-        ctx.session.messages.push({role: openai.roles.ASSISTANT, content: response.content})
-
-        await ctx.reply(response.content)
+        await processTextToChat(ctx, ctx.message.text)
     } catch (e) {
         console.log('Error while voice message', e.message)
     }
