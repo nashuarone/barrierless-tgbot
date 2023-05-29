@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "handy-diorama-388129",
+  "private_key_id": "0991381876836c0d404a6b19fae19133f596623f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCDAHmo1ZbhFlTY\nZtACYkinG5M5YhMCdi46yJulRaVXO8sxWkCWN1dlVyaZjn5bEg7AEqpmSVXeUOoa\npaRqHgCW8PQRdDHBiJmc3D+5d9SLG30qbmIcqrePk8sozCIsyu8m/a+F1i1PN5C7\nYWllOxbkIExccHiuX7lSQD+tp7I6/mfr+KEuDuUYjZh4uENf4igmUMw2fpCNiv4S\nye5z2jEJ4+pxT0NEZsTTYNGG2zyiOXatoLZd3dY5abO6Zt8I9UgdMkNmHWUW4Vw5\nW3nudoqqt/fWRDtCux0J0u7lxfQgFMrojRECzKAcG4sus/nMEK7Ph4ZV1jY2t3xc\n8zO3qOc5AgMBAAECggEAO3w4wjiStYzNZCJza9GzSeZUmOb22NRPM7QqMQcKCC2H\nm9Zuo4dnsQW86ldw+uudNQyEwcOlMTkuxIDYwrLy85dgTJili0r67eZ5LT/DjJMj\n5+ONu5Stm42x38mp7wsLQ3pIfI5/rov9tYiLMkN9poMgCY2szwl6fmXcRH90iCKd\nPtNy6s1Oo6iDKpobKHc+ve/97TCfBECaznSBM+qRHaigJlLdIUfYx6JRKh0p9bpa\nQEzkkrJOz2IM+LRgUVbM9DLEXbqc5S0XSQpb1M4IxF/3U4TcO8vjb7DbsYwkINGw\neWxvuwslEqerJMAx7goLbchE+pcyO4zuoNn46TjW3QKBgQC4SOfgdaxYL2xOb8TL\n/OiDZqad4cXryG0zp94NA7lx6TU0NGsl1wpKeh9pozIhXcgQFDz2WmVv21sNESOf\nZAwClAXuVn91pxCVrwasrJGCuAmGa6WJSPBYkVambW60IQRgc0t0CqvLgdcpCcE1\n8tS5kTKqh/h34fTejtn/kQyfgwKBgQC1+1ZztYS3LLw847M754kJLAgwikrkVaHL\nbHMw+yvPHh8Es34nqbC6zXcLM/G+sFc3Et0LqIjyVO5lvZzyMLVcqvUVIctIMKF3\nfczxzslcVZppGAAetqqKbM0DgDamR5n5lZ6UEfiWVwHCW+gILPzfTNZ5P0mwO983\nzsx2oPlFkwKBgQCaWKWs/6HLcly6DS680yRC+fTPA0vrwUCFJTH7oITvfS2MfeLI\nHKWH32Tz6zWPcKahoPG2O9v9pbFK7nHxi6/rcOLOzi+O8NAZLjDe6uIso8uGhB5v\nL2HuLDxww/MWdxjdV3N4y387wZHd00e50ZqNmajf32YhsmSPCwJW5Lu31QKBgDiM\nko/ALy5wg0n0g8SwrR+hhCX5Q05y4aUB3UWyNynUNVVTpXcTvuw9XqmniY5045Uk\nknXF+FA9XhtVcYi85A6YvTHE35NeMT6dY+scE+xSWXog0CC7KIF9T7Ovysue4lTx\nTma6suGcxdosjwzDVgzZpqfkp7RQ1otUAqs2WF9rAoGAZ3rIpX8dOZo122bnOr6f\nC/fgy+ylqlrdrd9CUWLP01Xmqtnfz7cH4a/EseGT45KyBoIuhX0XRyh9NDByMpei\nbPXhQGCVLKEiNL6ux/rLA5YxkOXcRgwkwnLqw2RFI+qqrNogEbsz8Su4yVHhKRZ2\nuVETeVvXKgkoycxSqZ1uosw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "barrierless@handy-diorama-388129.iam.gserviceaccount.com",
+  "client_id": "110103255843668905883",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/barrierless%40handy-diorama-388129.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
